@@ -2,6 +2,7 @@
 # Sharks Attacks
 
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+![Escápate](https://ibb.co/9TdhzWy)
 
 Welcome to our **Data Wrangling Quest**!
 This project is part of the Ironhack Data Analysis bootcamp.
@@ -21,12 +22,15 @@ We decided to eliminate several columns that we were not going to use because th
 
 Throughout the project, we have used Python programming and the Pandas library to implement these data cleaning techniques:
 - Handling null values.
-We used .fillna() to manage null valeus, replacing them with "not specified" or "unknown".
+
+We used .fillna() to manage null values, replacing them with "not specified" or "unknown".
 - Dropping columns.
+
 We dropped the columns that were not necessary for our analysis
 - Removing duplicated data.
 - Manipulating strings.
 - Applying Regex.
+
 We used Regular Expressions (Regex) to eliminate some characters in the data, such as special symbols.
 We also made a research on the patterns which might be relevant for some columns on this particular dataset (like patterns in  activity descriptions, etc.).
 - Formatting the data
