@@ -226,9 +226,9 @@ This function was also used in the **'species'** and **'activity' columns**, bei
 
 We used various types of visualizations to start understanding the trends and patterns in the data and to support our findings.
 
-![Map with locations](/images/mapa.jpg Locations with reported sharks attacks)
+![Map with locations](/images/mapa.jpg "Locations with reported sharks attacks")
 
-![Most dangerous activities](/images/actividad.jpg.jpg Activities with high number of attacks reported)
+![Most dangerous activities](/images/actividad.jpg.jpg "Activities with high number of attacks reported")
    
 
 # 8.- We prepare a visually appealing presentation to effectively **communicate the insights** and conclusions to stakeholders. 
