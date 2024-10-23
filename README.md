@@ -2,7 +2,7 @@
 # Sharks Attacks
 
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
-![Escápate](https://ibb.co/9TdhzWy)
+![Escápate](/images/escapate.jpg "Escápate. Explora el mar a tu ritmo: adrenalina o relax, tú decides")
 
 Welcome to our **Data Wrangling Quest**!
 This project is part of the Ironhack Data Analysis bootcamp.
@@ -36,8 +36,6 @@ We also made a research on the patterns which might be relevant for some columns
 - Formatting the data
 - Grouping data.
 - Creating pivot tables.
-
-(at least five data cleaning techniques) 
 
 
 During the cleaning phase of the dataset we have had to deal with:
@@ -85,6 +83,9 @@ df_sharks.head(5)
 
 ```
 
+The Shark Attacks dataset has 6970 rows and 23 columns.
+
+
 # 3.- Decide on a hypothesis (or hypotheses)/**case use** to guide our data cleaning efforts.
 
 We pretended that a major **travel agency** had hired us to solve their clients' concerns when choosing vacation destinations.
@@ -94,6 +95,8 @@ For this reason, we decided to investigate where shark sightings would be most p
 # 4.- **Analyze the structure** and quality of a dataset, identify potential issues or problems, and develop a plan for cleaning and transforming the data according to our needs.
 
 We made a function to **clean the column names**:
+We used the .replace() method to change blank spaces for "_"
+Then we made all names lower case using the .lower() method to standarize data in categorical columns.
 
 ```python
 
@@ -114,6 +117,7 @@ df_sharks = df_sharks.drop(columns=['pdf', 'href_formula', 'href', 'case_number'
 
 ```
 
+
 We managed the **date column** to be in the **correct format**, and kept the data from **the last 25 years**, as we consider that older data might be nos relevant our case.
 
 ```python
@@ -126,6 +130,9 @@ def filter_recent_dates(df, date_column='date', years=25):
     return df
 
 ```
+
+
+ After filtering the dates and dropping columns, the dataset had 2644 rows and 23 columns.
 
 # 5.- **Structure the data** to make it suitable for analysis.  
 
@@ -217,13 +224,20 @@ This function was also used in the **'species'** and **'activity' columns**, bei
 
 # 7.- We investigate to use **visualizations**.
 
-We used various types of visualizations (histograms, box plots, scatter plots, etc.) to start understanding the trends and patterns in the data and to support our findings.
+We used various types of visualizations to start understanding the trends and patterns in the data and to support our findings.
 
+![Map with locations](/images/mapa.jpg Locations with reported sharks attacks)
+
+![Most dangerous activities](/images/actividad.jpg.jpg Activities with high number of attacks reported)
    
 
-# 8.- We prepare a visually appealing presentation with minimal text to effectively **communicate the insights** and conclusions to stakeholders. 
+# 8.- We prepare a visually appealing presentation to effectively **communicate the insights** and conclusions to stakeholders. 
 
 We made sure building a compelling narrative that highlights the significance of our analysis.
+
+You can find the presentation slides here:  [Data Analysis for Escápate travel agency](https://prezi.com/p/2jnvucoj-bxa/?present=1)
+
+You can also download the .pdf file from this repository.
 
 
 
@@ -271,73 +285,11 @@ This project not only **enhanced our technical skills in data manipulation and c
 
 
 
-# Deliverables
-
-You must submit the following deliverables in order for the project to be deemed complete:
-
-    A new repository with the name data-cleaning-pandas on your GitHub account.
-    A working code that meets all technical requirements, built by you.
-    At least 1 Jupyter notebook is required
-    Include your functions in .py files
-    Additional needed files for your work
-    A README with the completed project documentation.
-    The URL of the slides for your project presentation.
-    Presentation: When presenting your work, there are many important factors to consider, such as the content of your presentation and the way you deliver it. See “Presentation” section below for guidelines.
-    Paste your own repository’s link in the Student Portal Project Activity.
-    Note: Each student should have their own repository to submit.
 
 
 
-# Presentation Structure
-
-Suggested format for the presentation as a guide.
-
-    Title Slide (1 slide): Your project’s name and your names.
-
-    Project Overview (1-2 slides):
-
-        Briefly describe the original dataset and the hypothesis you’ve formulated.
-        Explain the structure and process of your data cleaning and analysis.
-        Highlight any unique data cleaning techniques or methods you’ve employed.
-
-The Shark Attacks dataset has 6970 rows and 23 columns.
-We decided to eliminate several columns that we were not going to use because they were irrelevant for our analysis.
-We kept the data from the last 25 years because in our case, which is a travel agency, we think that older events may be irrelevant.
-Then, the dataset had 2644 rows and 23 columns.
-
-    Data Wrangling and Cleaning (1-2 slides):
-
-        Discuss the significant data cleaning challenges you encountered (missing data, duplicates, formatting issues, etc.).
-        Explain how you resolved these challenges.
-
-During the cleaning phase of the dataset we have had to deal with:
--null values and missing values
--duplicates
--spelling errors
--formatting inconsistencies
-
-First of all, we normalized the column names using the .replace() method to change blank spaces for "_"
-Then we use the .lower() method to standarize data in categorical columns, and make ir all lower case.
-
-
-    Exploratory Data Analysis (1-2 slides):
-
-        Discuss the exploratory data analysis methods you used.
-        Share insights and interesting patterns you found.
-
-    Major Obstacle (1-2 slides):
-
-        Discuss the biggest obstacle or mistake you encountered during this project.
-        Share what you learned from it and how it influenced your project.
 
 
 
-    Conclusion and Insights (1-2 slides):
 
-        Discuss whether your initial hypothesis was supported or refuted.
-        Share any surprising insights or findings.
-        Discuss potential implications of your findings.
-
-    Closing Slide (1 slide): Your project’s name, your names, and a “Thank You” message.
-    Total: 7-10 slides.
-
+    
